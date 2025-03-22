@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --cor-fundo: #050506;
+  --cor-fundo-medio: #1f2937;
+  --cor-texto: #f9fafb;
+  --cor-texto2: #9ca3af;
+  --cor-botao: #dc2626;
+  --cor-passar-por-cima: #971a1a;
+  --cor-amarelo: #f59e0b;
+  --cor-amarelo-por-cima: #d97706;
+  --transition: all 0.2s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: grid;
+    flex-direction: column;
+    place-items: center;
+}
+
+#arvore{
+    position: absolute;
+    width: 1000px;
+    opacity: 10%;
+    pointer-events: none;
+}
+
+#jogo-base {
+    display: block;
+    font-size: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 75px 0 #25272a;
+    border-radius: 3rem;
+    width: 90%;
+    max-width: 42rem; 
+}
+
+.vidas {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    max-width: 100%;
+}
+
+p{
+    font-size: 20px;
+    line-height: 200%;
+    max-width: 100%;
+    text-align: justify;
+}
+
+button{
+    border: 0;
+    background: #dc2626;
+    display:flex;
+    justify-items: center;
+    justify-content:center;
+    align-items:center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 15px 0 #971a1a;
+    margin: 1rem auto;
+    text-align: center;
+    width: 100%;
+    max-width: 42rem;
+
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 160%;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+button:hover{
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+
+
+
+.jogo-comeco {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 1rem;
+}
+
+
+.conteudo-comeco{
+    max-width: 46rem;
+    padding: 2rem;
+    text-align: justify;
+  }
+
+.titulo {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--cor-botao);
+    animation: pulse 2s infinite;
+    text-align: center;
+}
+
+.regras {
+    color: var(--cor-amarelo);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 25px;
+}
+
+.regras-lista {
+    text-align: left;
+    list-style-position: inside;
+    margin-bottom: 2rem;
+    color: var(--cor-texto2);
+}
+
+.butao {
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    max-width: 42rem;
+}
+  
+.butao-vermelho {
+    background-color: var(--cor-botao);
+}
+  
+.butao-vermelho:hover{
+    background-color: var(--cor-passar-por-cima);
+    transform: scale(1.05);
+}
+
+.coracoes{
+    fill: var(--cor-botao);
+    border: none;
+    stroke: var(--cor-botao);
+    stroke-width: 1px;
+}
+
+.coracoes-empty{
+    fill: transparent;
+    stroke-width: 1px;
+    stroke: var(--cor-texto);
+}
+
+#conteudo {
+    margin: 20px;
+    padding: 20px;
+    color: var(--cor-texto);
+    max-width: 43rem;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.grama {
+    background-image: url('https://github.com/user-attachments/assets/c57256cc-64ad-46ec-96dd-b1ba45d35187');
+    background-size: 400px;
+    background-position: bottom;
+    height: 310px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+
+    .titulo {
+        font-size: 3rem;
+    }
+
+    .jogo-comeco{
+        font-size: 1rem;
+    }
+}
+
+/* Media Queries para telas grandes (acima de 900px) */
+@media (min-width: 901px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+
+    .titulo {
+        font-size: 4rem;
+    }
+
+    .jogo-comeco{
+        font-size: 1.1rem;
+    }
+}
