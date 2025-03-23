@@ -1,8 +1,6 @@
 function resposta () {
     return Math.round(Math.random()*10) + 1;
 }
-
-
 export const capitulos = {
     abertura: {
         titulo: "Casebre",
@@ -10,7 +8,6 @@ export const capitulos = {
         escolhas: {
             comeco: {
                 texto: "Entrar no casebre",
-                saida: {},
                 proximoCapitulo: "bau"
             }
         }
@@ -18,32 +15,23 @@ export const capitulos = {
 
     bau: {
         titulo: "O Baú",
-        descricao: "Havia um baú contendo 4 itens de camping, eles serão divididos entre vocês, um de vocês não terá item auxiliar. Escolha um:",
+        descricao: "Havia um baú contendo 4 itens de camping, eles serão divididos entre vocês, Escolha um:",
         escolhas: {
             corda:{
                 texto: "Corda",
-                saida: {},
                 proximoCapitulo: "escolhaCorda"
             },
             faca:{
                 texto: "Faca",
-                saida: {},
                 proximoCapitulo: "sozinho"
             },
             lanterna:{
                 texto: "Lanterna",
-                saida: {},
                 proximoCapitulo: "escolhaLanterna"
             },
             fosforo:{
                 texto: "Caixa de fósforo",
-                saida: {},
                 proximoCapitulo: "escolhaFosforo"
-            },
-            nada:{
-                texto: "Não pegar nada",
-                saida: {},
-                proximoCapitulo: "escolhaNada"
             }
         }
     },
@@ -55,7 +43,6 @@ export const capitulos = {
         escolhas: {
             responder: {
                 texto: "- E por onde devemos seguir? - respondo",
-                saida: {},
                 proximoCapitulo: "caminhosSozinho"
             }
         }
@@ -67,17 +54,14 @@ export const capitulos = {
         escolhas:{
             lago: {
                 texto: "Você decide ir ao lago, para tentar procurar um barco.",
-                saida: {},
                 proximoCapitulo: "lagoSozinho"
             },
             floresta:{
                 texto: "Você decide ir para a floresta, buscar alguma saída.",
-                saida: {},
                 proximoCapitulo: "florestaSozinho"
             },
             celeiro:{
                 texto: "Você decide ir ao celeiro buscar abrigo pois está frio e a fogueira está apagando.",
-                saida: {},
                 proximoCapitulo: "celeiroSozinho"
             }
         }
@@ -89,7 +73,6 @@ export const capitulos = {
         escolhas:{
             voltar: {
                 texto: "Ir em direção ao celeiro",
-                saida: {},
                 proximoCapitulo: "celeiroSozinho"
             }
         }
@@ -97,22 +80,22 @@ export const capitulos = {
 
     florestaSozinho: {
         titulo: "Floresta Sozinho",
-        descricao: "Você avança pela floresta e se depara com um grande portão misterioso e uma figura macabra no escuro sussurra um enigma para você.",
+        descricao: "Você avança pela floresta e se depara com um grande portão misterioso e uma figura macabra no escuro sussurra um enigma para você: Sou um sussurro na escuridão, um eco de arrependimento. Meus olhos não veem, mas minha alma observa. Alimento-me de segredos e sede de esquecimento. Onde o tempo se curva e a razão se desfaz, lá encontrarei meu lar. Quem sou eu?",
         escolhas:{
             resposta1: {
-                texto: {},
-                saida: {},
-                proximoCapitulo: {}
+                texto: "Um Fantasma",
+                vidas: "",
+                proximoCapitulo: "fimMorte"
             },
             resposta2: {
-                texto: {},
-                saida: {},
-                proximoCapitulo: {}
+                texto: "A Loucura",
+                vidas: "",
+                proximoCapitulo:"fimFuga"
             },
             resposta3: {
-                texto: {},
-                saida: {},
-                proximoCapitulo: {}
+                texto: "Não responder e fugir",
+                vidas: -1,
+                proximoCapitulo: "caminhosSozinho"
             }
         }
     },
@@ -123,16 +106,50 @@ export const capitulos = {
         escolhas: {
             fugir:{
                 texto:"Fugir e abandonar todos",
-                //saida: {'perder todas as vidas'},
+                vidas: "",
                 proximoCapitulo: "fimMorte"
             },
             lutar: {
                 texto: "Lutar",
-                //saida: {'perder uma vida'},
+                vidas: "",
                 proximoCapitulo: "fimLuta"
             }
         }
     },
+    celeiroSozinho2:{
+        titulo: "Sorte?",
+        descricao: "Chico se posiciona em um andar acima da criatura, respira e salta em direção ao que parece ser a cabeça principal, porem a criatura reage e o agarra com a boca e o lança em direção a uma parede, quando parece ser o fim, Chico acerta algo macio, Lucy jogou uma pilha de feno no momento exato! A vida lhe deu outra oportunidade, não a desperdice.",
+        escolhas: {
+            lutar: {
+                texto: "Tentar novamente",
+                vidas: -1,
+                proximoCapitulo: "fimLuta2"
+            }
+        }
+    },
+
+    goodEnding:{
+        titulo: "A batalha feroz",
+        descricao: "Chico se posiciona em um andar acima da criatura, respira e salta em direção ao que parece ser a cabeça principal, tudo parecia se mover em camera lenta, tudo que Chico podia sentir era sua respiração ofegante e seu coração acelerado, sem saber se sairá vivo, Chico fecha seus olhos e... Acerta! um golpe decisivo na cabeça, a faca perfura a pele flacida e o crânio do monstro, a criatura começa a se debater em agonia lançando nosso herói em uma pilha de feno.",
+        escolhas: {
+            lutar: {
+                texto: "Finalizar",
+                proximoCapitulo: "contextoFim"
+            }
+        }
+    },
+
+    contextoFim:{
+        titulo: "A batalha feroz se encerra.",
+        descricao: "Chico fica paralizado após esse embate, Aimar e Lucy o trazem de volta a realidade, os 3 vão ate savino e notam que ele está apenas desacordado, sem ferimentos piores, Lucy encontra um celular, se encontra no mapa e liga para um hospital, após alguns minutos eles ouvem as sirenes e todos parecem ter saido são e salvos desse desastre, os médicos perguntam o que causou esse estrago no celeiro e os danos a você e seus colegas, Chico, Lucy e Aimar procuram a criatura e ela desapareceu.",
+        escolhas: {
+            lutar: {
+                texto: "Fim do Jogo?",
+                proximoCapitulo: ""
+            }
+        }
+    },
+
     //caminhos corda
     escolhaCorda: {
         titulo: "Corda",
@@ -140,7 +157,6 @@ export const capitulos = {
         escolhas: {
             responder: {
                 texto: "- E por onde devemos seguir? - respondo",
-                saida: {},
                 proximoCapitulo: "caminhosCorda"
             }
         }
@@ -152,17 +168,14 @@ export const capitulos = {
         escolhas:{
             lago: {
                 texto: "Você e lucy decidem ir ao lago, para tentar procurar um barco.",
-                saida: {},
                 proximoCapitulo: "lagoCorda"
             },
             floresta:{
                 texto: "Você e lucy decidem ir para a floresta, buscar alguma saída.",
-                saida: {},
                 proximoCapitulo: "florestaCorda"
             },
             celeiro:{
                 texto: "Você e lucy decidem ir ao celeiro buscar abrigo pois está frio e a fogueira está apagando.",
-                saida: {},
                 proximoCapitulo: "celeiroCorda"
             }
         }
@@ -174,7 +187,6 @@ export const capitulos = {
         escolhas: {
             irAoCeleiro:{
                 texto: "Seguir para o celeiro",
-                saida: {},
                 proximoCapitulo: "celeiroCorda"
             }
         }
@@ -182,16 +194,16 @@ export const capitulos = {
 
     celeiroCorda:{
         titulo: "No Celeiro",
-        descricao: "Você e lucy se dirigem ao celeiro, e encontraram Victor em cima de dois corpos, vocês os reconhecem, Aimar e Savino se encontram mortos a facadas. Victor começa se revelar sendo uma falsa-hidra, caçando você e lucy, que se encontram indefesos.",
+        descricao: "Você e lucy se dirigem ao celeiro, e encontraram Victor em cima de dois corpos, vocês os reconhecem, Aimar e Savino se encontram mortos a facadas. Victor começa se revelar sendo uma falsa-hidra, caçando você e Lucy, que se encontram indefesos.",
         escolhas: {
             fugir:{
                 texto:"Fugir e abandonar Lucy",
-                //saida: {'perder todas as vidas'},
-                proximoCapitulo: "fimMorte"
+                vidas: "",
+                proximoCapitulo: "fimFuga"
             },
             lutar: {
                 texto: "Lutar", //com uma corda não tem muita coisa que se possa fazer
-                //saida: {'perder uma vida'},
+                vidas: -1,
                 proximoCapitulo: "fimLuta"
             }
         }
@@ -199,11 +211,11 @@ export const capitulos = {
 
     florestaCorda:{
         titulo: "Na Floresta",
-        descricao: " Você e a lucy seguem pela floresta e se deparam com um portão, uma figura misteriosa aparece, Lucy solta um grito que atiça a criatura que ataca vocês dois. Lucy morre e você consegue fugir para o celeiro.",
+        descricao: " Você e a Lucy seguem pela floresta e se deparam com um portão, uma figura misteriosa aparece, Lucy solta um grito que atiça a criatura que ataca vocês dois. Lucy morre e você consegue fugir para o celeiro.",
         escolhas: {
             correr:{
                 texto: "Você corre em direção ao celeiro",
-                //saida: {perder uma vida},
+                vidas: -1,
                 proximoCapitulo: "celeiroSozinho"
             }
         }
@@ -215,7 +227,6 @@ export const capitulos = {
         escolhas: {
             responder: {
                 texto: "- E por onde devemos seguir? - respondo",
-                saida: {},
                 proximoCapitulo: "caminhosLanterna"
             }
         }
@@ -227,17 +238,14 @@ export const capitulos = {
         escolhas:{
             lago: {
                 texto: "Você e Savino decidem ir ao lago, para tentar procurar um barco.",
-                saida: {},
                 proximoCapitulo: "lagoLanterna"
             },
             floresta:{
                 texto: "Você e Savino decidem ir para a floresta, buscar alguma saída.",
-                saida: {},
                 proximoCapitulo: "florestaLanterna"
             },
             celeiro:{
                 texto: "Você e Savino decidem ir ao celeiro buscar abrigo pois está frio e a fogueira está apagando.",
-                saida: {},
                 proximoCapitulo: "celeiroLanterna"
             }
         }
@@ -249,7 +257,7 @@ export const capitulos = {
         escolhas: {
             irAoCeleiro:{
                 texto: "Seguir para o celeiro",
-                saida: {},
+                vidas:"",
                 proximoCapitulo: "celeiroLanterna"
             }
         }
@@ -261,7 +269,7 @@ export const capitulos = {
         escolhas: {
             morte:{
                 texto: "Aceitar a morte",
-                saida: {},
+                vidas: -1,
                 proximoCapitulo: "fimMorte"
             }
         }
@@ -273,12 +281,11 @@ export const capitulos = {
         escolhas: {
             fugir:{
                 texto: "Fugir e tentar se salvar",
-                saida: {},
                 proximoCapitulo: "fugaLanterna"
             },
             lutar:{
                 texto: "Lutar com Savino",
-                saida: {},
+                vidas: -1,
                 proximoCapitulo: "fimMorte"
             }
         }
@@ -290,7 +297,6 @@ export const capitulos = {
         escolhas: {
             fugir: {
                 texto: "Se salvar a todo custo",
-                saida: {},
                 proximoCapitulo: "fimFuga"
             }
         }
@@ -302,7 +308,6 @@ export const capitulos = {
         escolhas: {
             responder: {
                 texto: "- E por onde devemos seguir? - respondo",
-                saida: {},
                 proximoCapitulo: "caminhosFosforo"
             }
         }
@@ -314,17 +319,14 @@ export const capitulos = {
         escolhas:{
             lago: {
                 texto: "Você e Aimar decidem ir ao lago, para tentar procurar um barco.",
-                saida: {},
                 proximoCapitulo: "lagoFosforo"
             },
             floresta:{
                 texto: "Você e Aimar decidem ir para a floresta, buscar alguma saída.",
-                saida: {},
                 proximoCapitulo: "florestaFosforo"
             },
             celeiro:{
                 texto: "Você e Aimar decidem ir ao celeiro buscar abrigo pois está frio e a fogueira está apagando.",
-                saida: {},
                 proximoCapitulo: "celeiroFosforo"
             }
         }
@@ -336,12 +338,10 @@ export const capitulos = {
         escolhas:{
             combustivel:{
                 texto:"Pegar o combustivel e ir para o celeiro",
-                saida: {},
                 proximoCapitulo: "celeiroFosforo1"
             },
             fogueira:{
                 texto: "Ficar a beira do lago e fazer uma fogueira",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             }
         }
@@ -353,52 +353,42 @@ export const capitulos = {
         escolhas: {
             1:{
                 texto:"1 fosforo",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             2:{
                 texto:"2 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             3:{
                 texto:"3 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             4:{
                 texto:"4 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             5:{
                 texto:"5 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             6:{
                 texto:"6 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             7:{
                 texto:"7 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             8:{
                 texto:"8 fosforos",
-                saida: {},
                 proximoCapitulo: "fimFuga"
             },
             9:{
                 texto:"9 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
             10:{
                 texto:"10 fosforos",
-                saida: {},
                 proximoCapitulo: "fimMorte"
             },
         }
@@ -410,7 +400,7 @@ export const capitulos = {
         escolhas: {
             queimado:{
                 texto: "Morrer queimado",
-                saida: {},
+                saida: -1,
                 proximoCapitulo: ""
             }
         }
@@ -422,12 +412,11 @@ export const capitulos = {
         escolhas: {
             lutar:{
                 texto: "Jogar o combustivel na criatura e acender um fósforo",
-                saida: {},
                 proximoCapitulo: "fimFuga"
             },
             fugir: {
                 texto:"Fugir enquanto pode",
-                saida: {},
+                saida: -1,
                 proximoCapitulo: "fimMorte"
             }
         }
@@ -440,7 +429,7 @@ export const capitulos = {
         escolhas: {
             fim:{
                 texto: "Aceitar sua morte",
-                saida:{},
+                vidas: -1,
                 proximoCapitulo: ""
             }
         }
@@ -452,73 +441,40 @@ export const capitulos = {
         escolhas: {
             fim:{
                 texto: "Fugir",
-                saida:{},
                 proximoCapitulo: ""
             }
         }
-    }
+    },
 
-};
+    fimLuta:{
+        titulo: "Monstro a frente! Role iniciativa!",
+        descricao: "Vocês se chocam com uma situação de vida ou morte, Lucy corre e se esconde para pensar direito, aimar se prontifica e tenta distrair o monstro para que Chico ataque, sua faca é a unica arma, agarre-se a ela com firmeza pois ela pode custar não apenas a sua vida, mas a de todos os seus amigos. Role um D20",
+        escolhas: {
+            maior14:{
+                texto: "Se rolou mais que 14",
+                proximoCapitulo: "goodEnding"
+            },
+            menor14:{
+                texto: "Se rolou menos de 14",
+                proximoCapitulo: "celeiroSozinho2"
+            }
+        }
+    },
 
-function respostaCerta(){
-    if(1 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else{
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if(2 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (3 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (4 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (5 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (6 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (7 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (8 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else {
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if (9 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else{
-        proximoCapitulo: "fimMorte"
-    }
-    
-    if(10 == resposta){
-        proximoCapitulo: "fimFuga"
-    }else{
-        proximoCapitulo: "fimMorte"
-    }
-    return;
+    fimLuta2:{
+        titulo: "Monstro a frente! Nova oportunidade!",
+        descricao: "Lucy salvou sua vida, não perca as esperanças, ✨você é preenchido de determinação✨ Role um D20",
+        escolhas: {
+            maior14:{
+                texto: "Se rolou mais que 14",
+                vidas: "",
+                proximoCapitulo: "goodEnding"
+            },
+            menor14:{
+                texto: "Se rolou menos de 14",
+                vidas: -1,
+                proximoCapitulo: "fimMorte"
+            }
+        }
+    },
 }
