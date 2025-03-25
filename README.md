@@ -31,8 +31,6 @@ A cada fase a história toma um caminho, e por consequência, um final diferente
   &emsp;&emsp;|-->telaInicial.js<br>
 |README.md<br>
 
-</br>
-
 ## 🛠 Instalação
 
 <b>Windows:</b>
@@ -42,3 +40,25 @@ Extraia os arquivos.<br>
 Abra o VS Code, e logo em seguida abra a pasta contendo o código.<br>
 Baixe a extensão ```Live Server```.<br>
 Abra o arquivo:  ```index.html``` e execute a extensão.<br>
+
+## 🛠 Divisão de tarefas
+Desenvolvimento do enredo: Erik e Vinicius.<br>
+Desenvolvimento do design: Vinicius.<br>
+Desenvolvimento do código JavaScript: Vinicius.<br>
+Desenvolvimento do código CSS: Vinicius.<br>
+Desenvolvimento do código HTML: Vinicius.<br>
+Manutenção e incrementação do código principal: Erik.<br>
+Testes de funcionamento: Erik e Vinicius.<br>
+Organização da pastas GitHub: Erik.<br>
+
+## 📋 Licença/License
+O Acampamento © 2025 by Vinicius Cardoso de Lima e Erik dos Santos Raimundo is licensed under CC BY-SA 4.0 <br>
+</br>
+CC BY-SA 4.0<br>
+Creative Commons Attribution-ShareAlike 4.0 International<br>
+This license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. If others remix, adapt, or build upon the material, they must license the modified material under identical terms.<br>
+
+
+BY: Credit must be given to you, the creator.<br>
+
+SA: Adaptations must be shared under the same terms.<br>
