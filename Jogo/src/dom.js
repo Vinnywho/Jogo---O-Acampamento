@@ -19,7 +19,7 @@ function atualizarConteudo() {
     const telaFinal = `
             <h1 id="tituloFim">OBRIGADO POR JOGAR!</h1> 
 
-            <p class="message">Apesar das brincadeiras esse jogo foi desenvolvido com o maior respeito a todos o professores a quel foram citados. Espero que tenha gostado de jogar "O Acampamento", fique a vontade para começar novamente e explorar todas as possibilidades que criamos.</p>
+            <p class="message">Apesar das brincadeiras esse jogo foi desenvolvido com o maior respeito a todos o professores a qual foram citados. Espero que tenha gostado de jogar "O Acampamento", fique a vontade para começar novamente e explorar todas as possibilidades que criamos.</p>
             
             <button id="recomecar">Recomecar</button>
             
