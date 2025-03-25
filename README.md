@@ -1,6 +1,6 @@
 <h1 align="center">JOGO - O ACAMPAMENTO</h1> 
 
-## Integrante:
+## Integrantes:
 ### <a href="https://www.linkedin.com/in/erik-raimundo-5811762b8/">Erik dos Santos Raimundo </a>, <a href="https://www.linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/">Vinicius Cardoso de Lima</a>
 
 ## Descrição
